@@ -1,0 +1,11 @@
+.mat-column-id,
+.mat-column-firstName,
+.mat-column-lastName {
+    width: 30%;
+}
+
+.example-table-container {
+    min-height: 200px;
+    max-height: 400px;
+    overflow: auto;
+}

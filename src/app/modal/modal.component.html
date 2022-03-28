@@ -1,0 +1,60 @@
+<h1 mat-dialog-title>Patient details</h1>
+<div mat-dialog-content>
+    <mat-tab-group style="width: 760px" mat-stretch-tabs class="example-stretched-tabs" *ngIf="patientsService.selectedPatient">
+        <mat-tab style="width: 380px" label="Personal">
+            <div class="flex spaced">
+                <div class="modal-card" color="primary">
+                    <div>First name</div>
+                    <div>{{ patientsService.selectedPatient.firstName }}</div>
+                </div>
+
+                <div class="modal-card">
+                    <div>Last name</div>
+                    <div>{{ patientsService.selectedPatient.lastName }}</div>
+                </div>
+            </div>
+            <div class="flex spaced">
+                <div class="modal-card">
+                    <div>Email</div>
+                    <div>{{ patientsService.selectedPatient.email }}</div>
+                </div>
+
+                <div class="modal-card">
+                    <div>Gender</div>
+                    <div>{{ patientsService.selectedPatient.gender }}</div>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab style="width: 380px" label="Medical">
+            <div class="flex spaced">
+                <div class="modal-card" color="primary">
+                    <div>Administered Drug Treatment</div>
+                    <div>
+                        {{ patientsService.selectedPatient.administeredDrugTreatment }}
+                    </div>
+                </div>
+
+                <div class="modal-card">
+                    <div>Diagnosis Code</div>
+                    <div>{{ patientsService.selectedPatient.diagnosisCode }}</div>
+                </div>
+            </div>
+            <div class="flex spaced">
+                <div class="modal-card">
+                    <div>Diagnosis Description</div>
+                    <div>{{ patientsService.selectedPatient.diagnosisDescription }}</div>
+                </div>
+
+                <div class="modal-card">
+                    <div>Diagnosis Description Detailed</div>
+                    <div>
+                        {{ patientsService.selectedPatient.diagnosisDescriptionDetailed }}
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+</div>
